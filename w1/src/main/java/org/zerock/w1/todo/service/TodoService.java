@@ -10,6 +10,8 @@ import java.util.stream.IntStream;
 public enum TodoService {
     INSTANCE;
 
+    private TodoDAO
+
     public void register(TodoDTO todoDTO){
         System.out.println("DEBUG ........" + todoDTO);
     }

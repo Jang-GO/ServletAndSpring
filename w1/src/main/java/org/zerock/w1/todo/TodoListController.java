@@ -17,9 +17,8 @@ public class TodoListController extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("/todo/list");
-
         List<TodoDTO> dtoList = TodoService.INSTANCE.getList();
-        req.setAttribute("list",dtoList);
-        req.getRequestDispatcher("/WEB-INF/todo/List.jsp").forward(req,resp);
+        req.setAttribute("list", dtoList);
+        req.getRequestDispatcher("/WEB-INF/todo/List.jsp").forward(req, resp);
     }
 }

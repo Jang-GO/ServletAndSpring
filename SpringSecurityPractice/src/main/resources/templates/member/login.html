@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+  <div>
+      <th:block th:if="${param.logout !=null}">
+          <h1>Logout ....</h1>
+      </th:block>
+      <form action="/member/login" method="post">
+          <div>
+              <span>ID</span>
+              <input type="text" name="username" placeholder="USER ID">
+          </div>
+          <div>
+              <span>PW</span>
+              <input type="text" name="password" placeholder="PASSWORD">
+          </div>
+          <div>
+              <button type="submit">LOGIN</button>
+          </div>
+      </form>
+  </div>
+</body>
+</html>
